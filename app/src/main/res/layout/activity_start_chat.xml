@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".StartChat">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/hwcbackgroundtransparent"
+        />
+
+    <TextView
+        android:id="@+id/btn_start_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20sp"
+        app:layout_constraintBottom_toTopOf="@id/my_ad_banner_start"
+        android:text="Start Chat"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="20sp"
+        android:background="@drawable/btn_shape"
+        android:paddingEnd="20sp"
+        android:paddingStart="20sp"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/my_ad_banner_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8808226763708277/7059446373">
+
+    </com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_start_chat"
+        android:layout_marginBottom="20sp"
+        android:text="Chat With Huggy Wuggy"
+        android:textSize="20sp"
+        android:textColor="@color/colorOrange"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textStyle="bold"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
